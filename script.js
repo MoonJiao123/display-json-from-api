@@ -14,20 +14,20 @@ request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
         data.forEach(movie => {
             //display each movie
-            const card = document.createElement('div');
-            card.setAttribute('class', 'card');
+            const section = document.createElement('div');
+            section.setAttribute('class', 'section');
 
-            //set the title of card to movie title from json
+            //set the title of section to movie title from json
             const h1 = document.createElement('h1');
             h1.textContent = movie.title;
 
-            //set the content of the card to description of movie
+            //set the content of the section to description of movie
             const p = document.createElement('p');
             p.textContent = movie.description;
 
-            container.appendChild(card);
-            card.appendChild(h1);
-            card.appendChild(p);
+            container.appendChild(section);
+            section.appendChild(h1);
+            section.appendChild(p);
 
         })
     } else {
